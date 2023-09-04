@@ -43,7 +43,10 @@ public class StudentEntity {
     @Column(name = "NIC", nullable = false) // cannot be null( NOTNULL in mysql)
     private String nic;
 
+    //composite attribute
     private StudentName name;
+
+    //multi valued attribute
     @ElementCollection
     @CollectionTable(
         name="student_Mobile",
